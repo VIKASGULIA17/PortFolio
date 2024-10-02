@@ -23,7 +23,7 @@ const Leetcode = () => {
               ];
         
   return (
-    <div id="Project" className="w-full bg-black py-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <div id="qualifications" className="w-full bg-black py-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <h1 className="xl:text-center xl:text-7xl xl:text-white xl:pb-20 text-center text-white text-3xl font-bold  bg-black p-5">Qualifications</h1>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {data.map((item, index) => (
