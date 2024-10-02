@@ -31,13 +31,13 @@ const Navbar = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <div className="xl:fixed flex items-center justify-between xl:w-full xl:px-16  bg-[#6366F1] text-white xl:z-20 px-4 opacity-90">
+      <div className="xl:fixed flex items-center justify-between xl:w-full xl:px-16  bg-[#6366F1] text-white xl:z-20 px-4 opacity-90 h-12 md:h-16 lg:h-20 xl:h-20 2xl:h-20">
         <div className=" h2">Portfolio</div>
         
         <div className="xl:hidden md:hidden">
           <button
             onClick={() => setIsSideMenuOpen(!isSideMenuOpen)}
-            className="text-2xl text-white"
+            className="text-3xl text-white"
           >
             <MdMenu />
           </button>
