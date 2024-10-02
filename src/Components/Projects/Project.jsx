@@ -6,28 +6,29 @@ const Project = () => {
     {
       title: "Book Rental",
       description:
-        "Project 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere, nisi repudiandae ipsa veritatis, cumque, quam ex maiores voluptatibus optio impedit tempora magnam.",
+        "A web application that allows users to rent books online, track borrowing history, and receive recommendations based on reading preferences.",
       color: "bg-white",
     },
     {
       title: "SunDown clone",
       description:
-        "Project 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere, nisi repudiandae ipsa veritatis, cumque, quam ex maiores voluptatibus optio impedit tempora magnam.",
+        "A modern recreation of a vacation booking platform, featuring dynamic search filters, secure payment integration, and responsive user interfaces.",
       color: "bg-white",
     },
     {
       title: "Gemini clone",
       description:
-        "Project 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere, nisi repudiandae ipsa veritatis, cumque, quam ex maiores voluptatibus optio impedit tempora magnam.",
+        "A clone of the Gemini cryptocurrency exchange, enabling secure transactions, real-time price updates, and user portfolio management tools.",
       color: "bg-white",
     },
     {
       title: "Blog post",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facere, nisi repudiandae ipsa veritatis, cumque, quam ex maiores voluptatibus optio impedit tempora magnam.",
+        "A personal blog platform where users can publish posts, interact through comments, and explore categories with an intuitive user experience.",
       color: "red-100",
     },
   ];
+  
 
   return (
     <div
