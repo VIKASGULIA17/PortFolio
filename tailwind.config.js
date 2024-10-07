@@ -14,7 +14,7 @@ export default {
         // => @media (min-width: 1024px) { ... }
   
         'desktop': '1440px',
-        'hd':'1560px'
+        'hd':'2060px'
         // => @media (min-width: 1280px) { ... }
       },
       colors: {
