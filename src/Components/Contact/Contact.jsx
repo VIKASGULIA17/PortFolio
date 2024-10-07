@@ -58,26 +58,28 @@ const Contact = () => {
   return (
     <div
       id="Contact"
-      className="w-full h-auto bg-black px-4 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20 3xl:px-24 3xl:py-28 md:text-center lg:text-left"
+      className="w-full h-auto bg-black px-4 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20 3xl:px-24 3xl:py-28 md:text-center lg:text-left hd:h-[40vh]"
     >
       <div className="w-full h-full flex flex-col lg:flex-row bg-[#292929] text-zinc-50">
         {/* Contact Info */}
         <div className="lg:w-1/2 h-full lg:pl-20 lg:pr-10 lg:pt-24 hidden md:block lg:block">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl pt-5 pb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl pt-5 pb-6 hd:text-[100px]">
             Get In Touch
           </h1>
-          <h4 className="text-lg md:text-xl lg:text-2xl pb-4 md:pb-6">
+          <h4 className="text-lg md:text-xl lg:text-2xl pb-4 md:pb-6 hd:text-[60px] hd:my-10">
             Uttam Nagar, New Delhi, 110059
           </h4>
-          <p className="text-base md:text-lg lg:text-xl text-white font-medium">
+          <p className="text-base md:text-lg lg:text-xl text-white font-medium hd:text-[40px]">
             Email: vikasgulia17@gmail.com
           </p>
-          <div className="flex text-lg md:text-xl gap-3 pt-8 md:pt-10 items-center justify-center lg:justify-start">
+          <div className="flex text-lg md:text-xl gap-3 pt-8 md:pt-10 items-center justify-center lg:justify-start hd:my-10 hd:gap-6">
             <a
               href="https://www.instagram.com/vikasgulia17?igsh=bXFoMXNrMnM2dXdq"
               aria-label="Instagram Profile"
               target="_blank"
               rel="noopener noreferrer"
+              
+              className="border-2 rounded-full hd:text-3xl border-white p-2"
             >
               <BsInstagram />
             </a>
@@ -86,6 +88,7 @@ const Contact = () => {
               aria-label="LinkedIn Profile"
               target="_blank"
               rel="noopener noreferrer"
+              className="border-2 rounded-full hd:text-3xl border-white p-2"
             >
               <GrLinkedinOption />
             </a>
@@ -94,6 +97,7 @@ const Contact = () => {
               aria-label="GitHub Profile"
               target="_blank"
               rel="noopener noreferrer"
+              className="border-2 rounded-full hd:text-3xl border-white p-2"
             >
               <FaGithub />
             </a>
@@ -112,7 +116,7 @@ const Contact = () => {
               {/* Name and Email */}
               <div className="flex flex-col md:flex-row md:gap-4">
                 <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2"
+                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 hd:text-[37px]"
                   type="text"
                   placeholder="Name"
                   value={name}
@@ -120,7 +124,7 @@ const Contact = () => {
                   required
                 />
                 <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0"
+                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0 hd:text-[37px]"
                   type="email"
                   placeholder="Email"
                   value={email}
@@ -131,14 +135,14 @@ const Contact = () => {
               {/* Phone and Address */}
               <div className="flex flex-col md:flex-row md:gap-4">
                 <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2"
+                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 hd:text-[37px]"
                   type="text"
                   placeholder="Phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
                 <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0"
+                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0 hd:text-[37px]"
                   type="text"
                   placeholder="Address"
                   value={address}
@@ -148,7 +152,7 @@ const Contact = () => {
               {/* Subject */}
               <div className="w-full">
                 <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full"
+                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full hd:text-[37px]"
                   type="text"
                   placeholder="Subject"
                   value={subject}
@@ -161,7 +165,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   placeholder="Type your message"
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full h-32 md:h-40 lg:h-48"
+                  className="hd:text-[37px] capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full h-32 md:h-40 lg:h-48"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
@@ -171,7 +175,7 @@ const Contact = () => {
               <div className="w-full flex justify-start">
                 <button
                   type="submit"
-                  className="duration-500 bg-[#E6C7EB] border-2 border-[#E6C7EB] font-extralight w-full md:w-full lg:w-full h-10 mt-4 text-lg text-black hover:bg-transparent hover:text-[#E6C7EB] mb-5 "
+                  className="duration-500 bg-[#E6C7EB] border-2 border-[#E6C7EB] font-extralight w-full md:w-full lg:w-full h-10 mt-4 text-lg text-black hover:bg-transparent hover:text-[#E6C7EB] mb-5 hd:text-[37px] hd:h-16"
                 >
                   Submit
                 </button>

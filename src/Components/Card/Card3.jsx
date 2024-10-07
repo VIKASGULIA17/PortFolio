@@ -11,7 +11,7 @@ const Card2 = ({ data }) => {
           {data.description}
         </p>
         <div className="mt-2 md:mt-4 px-4 md:px-6 lg:px-9 text-sm md:text-md lg:text-lg 2xl:text-xl hd:text-[2rem] font-light ">
-          <p className="mt-2">
+          <p className="mt-2 hd:leading-10">
             {data.completion}
           </p>
         </div>

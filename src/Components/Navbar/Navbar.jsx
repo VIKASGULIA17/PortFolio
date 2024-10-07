@@ -31,8 +31,8 @@ const Navbar = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
-      <div className="xl:fixed flex items-center justify-between xl:w-full xl:px-16  bg-[#6366F1] text-white xl:z-20 px-4 opacity-90 h-12 md:h-16 lg:h-20 xl:h-20 2xl:h-20">
-        <div className=" h2">Portfolio</div>
+      <div className="xl:fixed flex items-center justify-between xl:w-full xl:px-16  bg-[#6366F1] text-white xl:z-20 px-4 opacity-90 h-12 md:h-16 lg:h-20 xl:h-20 2xl:h-20 hd:h-40">
+        <div className=" h2 hd:text-[100px]">Portfolio</div>
         
         <div className="xl:hidden md:hidden">
           <button
@@ -43,7 +43,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="xl:flex xl:gap-5 xl:text-lg xl:font-light xl:transition-transform xl:duration-300 xl:transform hidden  md:block text-white space-x-6 mx-9 my-4 h5">
+        <div className="xl:flex xl:gap-5 xl:text-lg xl:font-light xl:transition-transform xl:duration-300 xl:transform hidden  md:block text-white space-x-6 mx-9 my-4 h5 hd:text-[50px]">
           {data.map((item, index) => (
             <a
               key={index}
