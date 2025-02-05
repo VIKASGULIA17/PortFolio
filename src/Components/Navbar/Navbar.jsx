@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { motion } from "framer-motion";
 import {  Link } from "react-router-dom";
-import Resume from "../../assets/resume.pdf"
+import Resume from "../../assets/Resume_vikas.pdf"
 const Navbar = () => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
@@ -47,7 +47,8 @@ const Navbar = () => {
           {data.map((item, index) => (
             <a
               key={index}
-              className="xl:px-4 xl:py-2 hover:bg-slate-700 rounded-md "
+              className="xl:px-4 border-b-[2px] border-transparent hover:border-red-300 transition-all duration-300 ease-in-out"
+
               href={item.link}
             >
               {item.Name}
@@ -55,7 +56,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-
+{/* mobile view */}
       <div
         className={`fixed top-0 right-0 h-full bg-slate-800 text-white p-8 transition-transform duration-300 transform ${
           isSideMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -67,11 +68,11 @@ const Navbar = () => {
         >
           &times;
         </button>
-        <div className="flex flex-col gap-4 mt-8">
+        <div className="flex flex-col gap-4 mt-8 ">
           {data.map((item, index) => (
             <a
               key={index}
-              className="text-xl rounded-md px-4 py-2"
+              className="text-xl  p-4 text-center  w-[150px] rounded-2xl hover:bg-[#2b89e8d0]"
               href={item.link}
               onClick={() => setIsSideMenuOpen(false)}
             >

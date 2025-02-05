@@ -1,14 +1,14 @@
 export const programmingLanguages = [
   {
     imageurl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAojdfiU-YTTglyAywGexed1DmziFkV5v1Yg&s",
+      "https://thumbs.dreamstime.com/b/d-python-symbol-white-background-rendering-224812812.jpg",
     title: "Python",
     desc: "Python is a versatile language known for its simplicity and wide usage in fields like web development, data analysis, and automation. Its extensive libraries make it ideal for diverse tasks such as machine learning and scripting.",
     proficiency: "Advanced",
   },
   {
     imageurl:
-      "https://w7.pngwing.com/pngs/646/751/png-transparent-the-c-programming-language-computer-programming-programmer-others-blue-class-logo-thumbnail.png",
+      "https://i.pinimg.com/originals/51/45/df/5145df1033fa60f13b3b7125d2b69554.jpg",
     title: "C++",
     desc: "C++ is a powerful language used for system and application development. It provides excellent control over system resources, making it ideal for high-performance software, games, and large systems.",
     proficiency: "Advanced",
@@ -22,7 +22,7 @@ export const programmingLanguages = [
   },
   {
     imageurl:
-      "https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5-thumbnail.png",
+      "https://st4.depositphotos.com/1842549/20990/i/450/depositphotos_209900974-stock-photo-html-icon-internet-button-white.jpg",
     title: "HTML",
     desc: "HTML is the standard markup language used to structure web pages. It defines the building blocks of the web, like headings, paragraphs, and multimedia, essential for creating websites.",
     proficiency: "Advance",
@@ -43,14 +43,14 @@ export const programmingLanguages = [
       },
       {
         imageurl:
-        "https://w7.pngwing.com/pngs/452/495/png-transparent-react-javascript-angularjs-ionic-github-text-logo-symmetry-thumbnail.png",
+        "https://static-00.iconduck.com/assets.00/react-icon-512x512-u6e60ayf.png",
         title: "React.js",
         desc: "React.js is a JavaScript library used for building dynamic user interfaces. It simplifies the development of single-page applications through reusable components and efficient state management.",
         proficiency: "Intermediate",
       },
       {
         imageurl:
-        "https://w7.pngwing.com/pngs/751/3/png-transparent-logo-php-html-others-text-trademark-logo-thumbnail.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QAc8DTxjjdb9xvj-UtW5fchIsYCDOApdlw&s",
         title: "PHP",
         desc: "PHP is a popular server-side scripting language primarily used for web development. It's widely employed to create dynamic websites and works seamlessly with databases like MySQL.",
         proficiency: "Intermediate",

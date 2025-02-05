@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import photo from "../../assets/pictures/myimage.jpeg";
+import photo from "../../assets/pictures/HomePagePic.jpeg";
 
 const Homepage = () => {
   const image = [
@@ -20,7 +20,7 @@ const Homepage = () => {
       transition={{ duration: 1, delay: 0.5 }}
     >
       <img
-  className="w-4/5 sm:w-3/4 lg:w-[30vw] h-auto lg:h-[65vh] object-cover rounded-lg md:mx-9 md:w-[40vw] desktop:h-[50vh] "
+  className="w-4/5 sm:w-3/4 lg:w-[30vw] h-auto lg:h-[80vh]  rounded-lg md:mx-9 md:w-[40vw] desktop:h-[79vh] object-fill"
   src={photo}
   alt="Portrait of Vikas Gulia, aspiring data scientist"
 

@@ -79,8 +79,8 @@ export default {
         DEFAULT: "0.0625rem",
       },
       backgroundImage: {
-        'backgroundimg': "url('https://t4.ftcdn.net/jpg/05/50/33/47/360_F_550334715_0d2cdaljV4Xd3x7yVUhRxfmLLEUyMdXr.jpg')",
-        'foregroundimg': "url('https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')",
+        'backgroundimg': "url('https://media.istockphoto.com/id/1441792487/vector/colorful-online-education-circular-illustration.jpg?s=612x612&w=0&k=20&c=2Fz9yMo--55ZyEHNOlqdYQOnXwTRuU50spD6I6VYHHQ=')",
+        'foregroundimg': "url('https://media.istockphoto.com/id/1441792487/vector/colorful-online-education-circular-illustration.jpg?s=612x612&w=0&k=20&c=2Fz9yMo--55ZyEHNOlqdYQOnXwTRuU50spD6I6VYHHQ=')",
       },
       
     },

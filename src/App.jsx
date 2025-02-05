@@ -4,11 +4,11 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar'
 import Homepage from './Components/Homepage/Homepage'
-import List from './Components/List/List'
+import SkillSet from './Components/SkillSet/SkillSet'
 import About from './Components/About/About'
 import Contact from './Components/Contact/Contact'
 import Project from './Components/Projects/Project'
-import Leetcode from './Components/Leetcode/Leetcode'
+import Qualifications from './Components/Qualifications/Qualifications'
 import { UpdateFollower } from 'react-mouse-follower';
 const App = () => {
   return (
@@ -30,8 +30,8 @@ const App = () => {
       <Navbar />
 
       <Homepage />
-      <List />
-      <Leetcode />
+      <SkillSet />
+      <Qualifications />
       <About />
       <Project />
       <Contact /> 
