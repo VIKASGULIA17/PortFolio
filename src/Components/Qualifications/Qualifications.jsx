@@ -31,9 +31,9 @@ const Qualifications = () => {
   ];
 
   return (
-    <section id="qualifications" className="w-full  h-auto bg-black px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <section id="qualifications" className="w-full  h-auto bg-black px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16  py-10">
       <header>
-        <h1 className="text-center text-white text-3xl xl:text-7xl font-bold py-7">
+        <h1 className="text-center text-white text-3xl xl:text-7xl font-bold pb-10">
           Qualifications
         </h1>
       </header>

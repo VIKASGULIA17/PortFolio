@@ -61,7 +61,7 @@ const AboutImage = () => (
       alt="Vikas Gulia"
       width={500}
       height={500}
-      className="w-[95%] h-[70vh] mx-1 border-4 border-white object-cover lg:py-10 lg:border-none lg:h-[90vh] lg:pr-0 xl:border-none xl:py-20 xl:px-10 2xl:py-10 2xl:border-none 2xl:h-full 2xl:px-10 md:h-96 md:w-[60%] md:mx-36 md:object-cover xl:rounded-[60px] hd:rounded-[100px] rounded-3xl xl:h-[50%] hd:h-[60vh]"
+      className="w-[95%] h-[70vh] mx-1 border-4 border-white object-cover lg:py-10 lg:border-none lg:h-[90vh] lg:pr-0 xl:border-none xl:py-20 xl:px-10 2xl:py-10 2xl:border-none 2xl:h-full 2xl:px-10 md:h-[50rem] md:w-[60%] md:mx-36 md:object-cover xl:rounded-[60px] hd:rounded-[100px] rounded-3xl xl:h-[50%] hd:h-[60vh]"
     />
   </div>
 )
