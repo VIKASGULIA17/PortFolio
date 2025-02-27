@@ -1,97 +1,77 @@
+import React from "react";
+import { Button } from "@/components/ui/button"; 
+import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import Photo from "@/assets/pictures/AboutPagePic.jpeg"
 
-
-import { BsInstagram } from "react-icons/bs"
-import { GrLinkedinOption } from "react-icons/gr"
-import { FaGithub } from "react-icons/fa"
-import pic from "../../assets/pictures/AboutPagePic.jpeg"
-import {
-  Github,
-  Linkedin,
-  Instagram,
-  Mail,
-  ExternalLink,
-  ChevronRight,
-  Code,
-  Layers,
-  Terminal,
-  Cpu,
-} from "lucide-react";
-const socialLinks = [
-  { href: "https://www.instagram.com/orewa__vikas", Icon: BsInstagram, label: "Instagram" },
-  { href: "https://www.linkedin.com/in/vikas-gulia-b28255298", Icon: GrLinkedinOption, label: "LinkedIn" },
-  { href: "https://github.com/VIKASGULIA17", Icon: FaGithub, label: "GitHub" },
-]
-  
-const About = () => {
+export default function AboutMe() {
   return (
-    <section id="About" className="w-full bg-[#212527] md:px-8 lg:px-16 lg:py-20 md:py-6 overflow-hidden">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start bg-slate-900/100 text-zinc-50 pb-5">
-        <AboutContent />
-        <AboutImage />
+    <section className="bg-[#121212] text-white py-28 px-4 md:px-8">
+      <div className="container mx-auto max-w-4xl">
+        <h2 className="text-[#5B5DDC] text-3xl md:text-4xl text-center pb-16 font-bold mb-8">About Me</h2>
+
+        <div className="flex flex-col md:flex-row gap-8 items-center md:items-start lg:gap-20">
+          <div className="flex-shrink-0">
+            <div className="relative w-60 h-60 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#5B5DDC]">
+              <img
+                src={Photo}
+                alt="Profile Picture"
+                className="object-cover"
+              />
+            </div>
+
+            <div className="flex justify-center mt-4 space-x-3">
+              <a
+                href="https://github.com/vikasgulia17"
+                className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={24} />
+                <span className="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/vikas-gulia-b28255298/"
+                className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={24} />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://instagram.com/orewa__vikas"
+                className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram size={24} />
+                <span className="sr-only">Instagram</span>
+              </a>
+              <a
+                href="vikasgulia17@email.com"
+                className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
+              >
+                <Mail size={24} />
+                <span className="sr-only">Email</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-2xl font-semibold mb-2">Vikas Gulia</h3>
+            <p className="text-[#5B5DDC] font-medium mb-4">Front End Developer</p>
+
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            I'm a passionate developer with a strong foundation in web development, specializing in React, HTML, CSS, Tailwind, and PHP. Alongside web development, I'm also focused on data science and problem-solving through DSA, continuously improving my skills by practicing on LeetCode.
+            </p>
+
+            <Button className="bg-[#5B5DDC] hover:bg-[#4A4CB8] text-white">
+              <Link to="/projects">View My Work</Link>
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }
-
-const AboutContent = () => (
-  <div className="flex flex-col lg:w-1/2 lg:pl-16 lg:pr-10 lg:pt-16 lg:pb-20 p-4 text-center lg:text-start">
-    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold pb-4 hd:text-[120px]">About Me</h1>
-    <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold pb-6 hd:text-[65px] hd:font-[500] hd:py-[40px]">
-      My name is Vikas Gulia
-    </h4>
-    <p className="text-base md:text-lg lg:text-xl font-medium pb-6 text-justify md:px-10 lg:px-0 px-40 hd:text-[35px] hd:leading-[40px] hd:pt-10 hd:pb-10">
-      I am a dedicated programmer with a passion for coding and problem-solving, aspiring to become a data scientist. My
-      commitment to continuous learning drives me to deliver efficient, data-driven solutions. As an adaptable team
-      player, I thrive in collaborative environments, consistently meeting and exceeding project goals.
-    </p>
-    <SocialLinks />
-    <AboutButton />
-  </div>
-)
-
-const SocialLinks = () => (
-  <div className="flex space-x-4 lg:text-2xl lg:content-start lg:justify-start pb-6 justify-center content-center text-lg">
-    <div className="flex gap-4">
-                <a
-                  href="https://github.com/VIKASGULIA17"
-                  className="size-10 rounded-full bg-zinc-800 hover:bg-[#5B5DDC] transition-colors flex items-center justify-center text-white"
-                >
-                  <Github className="size-5" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/vikas-gulia-b28255298"
-                  className="size-10 rounded-full bg-zinc-800 hover:bg-[#5B5DDC] transition-colors flex items-center justify-center text-white"
-                >
-                  <Linkedin className="size-5" />
-                </a>
-                <a
-                  href="https://www.instagram.com/orewa__vikas"
-                  className="size-10 rounded-full bg-zinc-800 hover:bg-[#5B5DDC] transition-colors flex items-center justify-center text-white"
-                >
-                  <Mail className="size-5" />
-                </a>
-
-                </div>
-  </div>
-)
-
-const AboutButton = () => (
-  <button className="bg-[#E6C7EB] border-2 border-[#E6C7EB] font-extralight w-32 h-10 mt-6 text-lg text-black hover:bg-slate-900/100 hover:text-[#E6C7EB] duration-300 mx-60 md:mx-72 lg:mx-0 hd:w-48 hd:h-16 hd:text-3xl hd:mt-20 overflow-hidden">
-    About Me
-  </button>
-)
-
-const AboutImage = () => (
-  <div className="w-full lg:w-[50vw]">
-    <img
-      src={pic || "/placeholder.svg"}
-      alt="Vikas Gulia"
-      width={500}
-      height={500}
-      className="w-[95%] h-[70vh] mx-1 border-4 border-white object-cover lg:py-10 lg:border-none lg:h-[90vh] lg:pr-0 xl:border-none xl:py-20 xl:px-10 2xl:py-10 2xl:border-none 2xl:h-full 2xl:px-10 md:h-[50rem] md:w-[60%] md:mx-36 md:object-cover xl:rounded-[60px] hd:rounded-[100px] rounded-3xl xl:h-[50%] hd:h-[60vh]"
-    />
-  </div>
-)
-
-export default About
-

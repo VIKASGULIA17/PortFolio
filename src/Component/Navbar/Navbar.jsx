@@ -103,8 +103,8 @@ const [TextColor, setTextColor] = useState("About")
           <Link to="/projects" className="text-xl p-4 text-center w-[150px] rounded-2xl duration-500 hover:bg-[#2b89e8d0]">
             Projects
           </Link>
-          <Link to="/contact" className="text-xl p-4 text-center w-[150px] rounded-2xl duration-500 hover:bg-[#2b89e8d0]">
-            Contact
+          <Link to="/blog" className="text-xl p-4 text-center w-[150px] rounded-2xl duration-500 hover:bg-[#2b89e8d0]">
+            blog
           </Link>
         
         </div>
