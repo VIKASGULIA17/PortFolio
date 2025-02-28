@@ -164,9 +164,9 @@ const AboutMe = () => {
                   <div className="size-12 rounded-lg bg-[#5B5DDC]/20 flex items-center justify-center mb-4">
                     <Cpu className="size-6 text-[#5B5DDC]" />
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-white">DevOps & Cloud</h4>
+                  <h4 className="text-xl font-bold mb-2 text-white">Data science & Machine learning</h4>
                   <p className="text-zinc-400">
-                    AWS, Docker, CI/CD pipelines, and infrastructure as code
+                    Python ,MYSQL , python libraries ,probability & statistics
                   </p>
                 </div>
               </div>
@@ -183,12 +183,12 @@ const AboutMe = () => {
             <div className="relative border-l-2 border-zinc-700 pl-8 pb-8">
               <div className="absolute left-[-8px] top-0 size-4 rounded-full bg-[#5B5DDC]"></div>
               <div className="mb-2 text-sm text-[#5B5DDC] font-semibold">
-                2020 - Present
+                2025 - Present
               </div>
               <h3 className="text-xl font-bold mb-1 text-white">
-                Senior Software Engineer
+                Student
               </h3>
-              <div className="text-zinc-400 mb-3">Tech Innovations Inc.</div>
+              <div className="text-zinc-400 mb-3">Institute of Information Technology & Management</div>
               <p className="text-zinc-300">
                 Leading development of enterprise web applications, mentoring junior developers, and
                 implementing best practices for code quality and performance.
@@ -198,12 +198,12 @@ const AboutMe = () => {
             <div className="relative border-l-2 border-zinc-700 pl-8 pb-8">
               <div className="absolute left-[-8px] top-0 size-4 rounded-full bg-[#5B5DDC]"></div>
               <div className="mb-2 text-sm text-[#5B5DDC] font-semibold">
-                2017 - 2020
+                2022-2023
               </div>
               <h3 className="text-xl font-bold mb-1 text-white">
-                Frontend Developer
+              Higher Secondary School
               </h3>
-              <div className="text-zinc-400 mb-3">Digital Solutions Co.</div>
+              <div className="text-zinc-400 mb-3">Spring Meadows public School</div>
               <p className="text-zinc-300">
                 Developed responsive web applications using React and Redux, collaborated with designers
                 to implement pixel-perfect UIs, and optimized application performance.
@@ -213,10 +213,10 @@ const AboutMe = () => {
             <div className="relative border-l-2 border-zinc-700 pl-8">
               <div className="absolute left-[-8px] top-0 size-4 rounded-full bg-[#5B5DDC]"></div>
               <div className="mb-2 text-sm text-[#5B5DDC] font-semibold">
-                2015 - 2017
+                2020-2021
               </div>
-              <h3 className="text-xl font-bold mb-1 text-white">Web Developer</h3>
-              <div className="text-zinc-400 mb-3">Creative Agency XYZ</div>
+              <h3 className="text-xl font-bold mb-1 text-white">High School</h3>
+              <div className="text-zinc-400 mb-3">Hari Krishna Public Schoolg</div>
               <p className="text-zinc-300">
                 Built websites and web applications for various clients, implemented responsive designs,
                 and maintained existing codebases.
