@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
   const [scrolled, setScrolled] = useState(false);
-const [TextColor, setTextColor] = useState("About")
+const [TextColor, setTextColor] = useState("Home")
 
   useEffect(() => {
     const handleScroll = () => {

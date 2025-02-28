@@ -4,14 +4,15 @@ import SkillSet from '@/Component/SkillSet/SkillSet'
 import Project from "@/Pages/Project"
 import Footer from '@/Component/Footer/Footer'
 import About from '@/Component/About/About'
+import SkillsSection from "@/Pages/Skill-section";
 
 const Home = () => {
   return (
     <div className='classname="overflow-hidden"'>
         <Homepage />
-        <SkillSet />
         <About />
         <Project />
+        <SkillsSection />
 
         <Footer />
 

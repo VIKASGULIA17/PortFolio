@@ -9,7 +9,7 @@ const blogPosts = [
     excerpt:
       "Learn the fundamentals of HTML, CSS, and JavaScript to kickstart your web development journey.",
     date: "Feb 24, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg",
     tags: ["Beginners", "Web Dev"],
     slug: "/blog/getting-started",
   },
@@ -19,7 +19,7 @@ const blogPosts = [
     excerpt:
       "Explore advanced React patterns that will help you build more maintainable and scalable applications.",
     date: "Feb 20, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "https://www.bacancytechnology.com/qanda/wp-content/uploads/2023/06/React-Animated-Fade.png",
     tags: ["React", "Advanced"],
     slug: "/blog/advanced-react",
   },
@@ -29,7 +29,7 @@ const blogPosts = [
     excerpt:
       "Discover how artificial intelligence is transforming the landscape of modern web development.",
     date: "Feb 15, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "https://media.licdn.com/dms/image/v2/D4D12AQE6JlCOS0JjrQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689050009065?e=2147483647&v=beta&t=9n4b22jjQW-dTFsFCjdS_nwPKHjkBCwBg8Ag6Y4F9dc",
     tags: ["AI", "Future Tech"],
     slug: "/blog/ai-web-dev",
   },
@@ -39,27 +39,17 @@ const blogPosts = [
     excerpt:
       "Learn essential techniques to improve your website's loading speed and overall performance.",
     date: "Feb 10, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "https://www.shutterstock.com/shutterstock/videos/1081041155/thumb/5.jpg?ip=x480",
     tags: ["Performance", "Optimization"],
     slug: "/blog/performance",
   },
   {
     id: 5,
-    title: "Building Accessible Web Applications",
-    excerpt:
-      "Understand the importance of web accessibility and how to implement it in your projects.",
-    date: "Feb 5, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
-    tags: ["Accessibility", "Best Practices"],
-    slug: "/blog/accessibility",
-  },
-  {
-    id: 6,
     title: "Introduction to TypeScript",
     excerpt:
       "Get started with TypeScript and learn how it can improve your JavaScript development experience.",
     date: "Jan 30, 2025",
-    imageUrl: "/placeholder.svg?height=200&width=400",
+    imageUrl: "https://cbx-prod.b-cdn.net/COLOURBOX50689510.jpg?width=800&height=800&quality=70",
     tags: ["TypeScript", "JavaScript"],
     slug: "/blog/typescript-intro",
   },

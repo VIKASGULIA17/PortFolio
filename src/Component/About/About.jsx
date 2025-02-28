@@ -8,11 +8,11 @@ export default function AboutMe() {
   return (
     <section className="bg-[#121212] text-white py-28 px-4 md:px-8">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-[#5B5DDC] text-3xl md:text-4xl text-center pb-16 font-bold mb-8">About Me</h2>
+        <h2 className="text-[#5B5DDC] text-3xl md:text-4xl text-center pb-10 lg:pb-16 font-bold lg:mb-8">About Me</h2>
 
         <div className="flex flex-col md:flex-row gap-8 items-center md:items-start lg:gap-20">
           <div className="flex-shrink-0">
-            <div className="relative w-60 h-60 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#5B5DDC]">
+            <div className="relative w-60 h-60 lg:w-80 lg:h-80 rounded-3xl lg:rounded-full overflow-hidden border-4 border-[#5B5DDC]">
               <img
                 src={Photo}
                 alt="Profile Picture"
@@ -67,8 +67,9 @@ export default function AboutMe() {
             </p>
 
             <Button className="bg-[#5B5DDC] hover:bg-[#4A4CB8] text-white">
-              <Link to="/projects">View My Work</Link>
+              <Link to="/AboutMe">Read More</Link>
             </Button>
+            
           </div>
         </div>
       </div>

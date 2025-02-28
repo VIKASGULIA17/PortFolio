@@ -11,7 +11,7 @@ export default function ProjectsSection() {
       title: "E-Commerce Platform",
       description:
         "A full-featured online store with product catalog, shopping cart, and secure checkout process.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://www.vocso.com/blog/wp-content/uploads/2022/02/eCommerce-Website-Features-1920-x-1080.jpg",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       demoUrl: "#",
       sourceUrl: "#",
@@ -21,7 +21,7 @@ export default function ProjectsSection() {
       title: "Task Management App",
       description:
         "A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://static.vecteezy.com/system/resources/previews/006/506/843/non_2x/unique-modern-flat-design-concept-of-task-management-for-website-and-mobile-website-easy-to-edit-and-customize-illustration-free-vector.jpg",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
       demoUrl: "#",
       sourceUrl: "#",
@@ -31,7 +31,7 @@ export default function ProjectsSection() {
       title: "Weather Dashboard",
       description:
         "Real-time weather information with interactive maps, forecasts, and location-based services.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://play-lh.googleusercontent.com/_q9Sm5CjBSJzdbi41S-OFuYJlpL65mNrDxvTTOhUh4z165EOTAYlsI9sKdZuGMv6YCY=w526-h296-rw",
       technologies: ["Vue.js", "Express", "OpenWeather API", "Mapbox"],
       demoUrl: "#",
       sourceUrl: "#",
@@ -41,7 +41,7 @@ export default function ProjectsSection() {
       title: "Social Media Analytics",
       description:
         "Data visualization platform for tracking engagement metrics across multiple social media channels.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4nJ2mK80lp-qTnHLBKS_-fw7FZ5Nly8uQxw&s",
       technologies: ["React", "D3.js", "Firebase", "Material UI"],
       demoUrl: "#",
       sourceUrl: "#",
@@ -51,7 +51,7 @@ export default function ProjectsSection() {
       title: "Portfolio Website",
       description:
         "Personal portfolio showcasing projects and skills with a modern, responsive design.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh7PTcPoUVdv7MgIAVGpEDD0amCk5EN-olw&s",
       technologies: ["React.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
       demoUrl: "#",
       sourceUrl: "#",

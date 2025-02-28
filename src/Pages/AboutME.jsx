@@ -11,6 +11,7 @@ import {
   Terminal,
   Cpu,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Resume from "@/assets/Resume_vikas.pdf"
 import { Button } from "../components/ui/button"; 
 import Footer from "@/Component/Footer/Footer";
@@ -79,7 +80,10 @@ const AboutMe = () => {
                   variant="outline"
                   className="border-[#5B5DDC] text-[#5B5DDC] hover:bg-[#5B5DDC]/10 hover:text-white"
                 >
-                  View Projects <ChevronRight className="ml-2 size-4" />
+                  <Link to='/projects'>
+                  View Projects 
+                  </Link>
+                  <ChevronRight className="ml-2 size-4" />
                 </Button>
               </div>
               <div className="flex gap-4">

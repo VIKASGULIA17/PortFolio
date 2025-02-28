@@ -57,11 +57,11 @@ module.exports = {
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			color: {
-  				'1': '#AC6AFF',
-  				'2': '#FFC876',
-  				'3': '#FF776F',
-  				'4': '#7ADB78',
-  				'5': '#858DFF',
+  				'1': '#687EFF',
+  				'2': '#060606',
+  				'3': '#131313',
+  				'4': '#949CB0',
+  				'5': '#FFFFFF',
   				'6': '#FF98E2'
   			},
   			stroke: {

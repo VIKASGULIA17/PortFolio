@@ -14,6 +14,7 @@ import Home from "./Pages/Home";
 import BlogSection from "@/Pages/Blogs";
 import { UpdateFollower } from "react-mouse-follower";
 
+
 const App = () => {
   return (
 

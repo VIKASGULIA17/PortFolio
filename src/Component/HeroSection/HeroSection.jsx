@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, GitlabIcon as GitHub, Linkedin, Twitter } from "lucide-react";
 import Photo from "@/assets/pictures/MyImage.jpeg"
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,19 +62,18 @@ export default function HeroSection() {
               </p>
             </motion.div>
             <motion.div variants={item} className="flex flex-wrap justify-center gap-4 md:justify-start">
-              <a
-                href="#projects"
+              <Link to='/projects'
                 className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-[#5B5DDC] px-6 font-medium text-white transition-all hover:bg-opacity-90"
               >
                 <span className="relative">View My Work</span>
                 <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+              to='/contact'
                 className="inline-flex h-12 items-center justify-center rounded-md border border-[#5B5DDC] bg-transparent px-6 font-medium text-[#5B5DDC] transition-colors hover:bg-[#5B5DDC]/10"
               >
                 Contact Me
-              </a>
+              </Link>
             </motion.div>
             <motion.div variants={item} className="flex justify-center gap-6 pt-4 md:justify-start">
               <a
@@ -113,7 +113,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="relative flex-1"
           >
-            <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-[#5B5DDC] sm:h-80 sm:w-80 md:h-96 md:w-96">
+            <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-[#5B5DDC] sm:h-80 sm:w-80 md:h-96 md:w-96 z-20">
               <div className="absolute inset-0 bg-gradient-to-br from-[#5B5DDC]/20 to-transparent"></div>
               <img
                 src={Photo}
