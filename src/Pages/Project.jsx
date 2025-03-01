@@ -59,9 +59,9 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#121212]">
+    <section className="py-16 px-4 md:px-8 lg:px-16 bg-color-2">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-[#5B5DDC] text-center md:text-left">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-color-1 text-center md:text-left">
           My Projects
         </h2>
 
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-[#1E1E1E] hover:shadow-[0_0_15px_rgba(91,93,220,110.3)] hover:-translate-y-1 rounded-xl overflow-hidden shadow-md transition-all duration-300"
+              className="bg-[#222121] hover:shadow-[0_0_15px_rgba(91,93,220,110.3)] hover:-translate-y-1 rounded-xl overflow-hidden shadow-md transition-all duration-300"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               whileHover={{ scale: 1.03 }}
@@ -87,13 +87,13 @@ export default function ProjectsSection() {
 
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-[#5B5DDC]">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <p className="text-color-5 mb-4">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm font-medium rounded-full bg-[#5B5DDC]/10 text-[#5B5DDC]"
+                      className="px-3 py-1 text-sm font-medium rounded-full bg-[#5B5DDC]/10 text-[#6f71e3]"
                     >
                       {tech}
                     </span>

@@ -33,11 +33,11 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="relative min-h-screen bg-gray-950 text-white">
+    <div className="relative min-h-screen bg-color-3 text-color-5">
       
     
       {/* Hero Content */}
-      <div className="container mx-auto px-4 pt-24 md:pt-32">
+      <div className="container mx-auto px-4 pt-24 md:pt-24">
         <div className="flex min-h-[calc(100vh-6rem)] flex-col-reverse items-center justify-center gap-8 py-12 md:flex-row md:gap-12 md:py-16">
           {/* Text Content */}
           <motion.div
@@ -47,30 +47,30 @@ export default function HeroSection() {
             className="flex-1 space-y-6 text-center md:text-left"
           >
             <motion.div variants={item}>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#5B5DDC]">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-color-1">
                 Frontend Developer & UI/UX Designer
               </h2>
             </motion.div>
             <motion.div variants={item}>
-              <h1 className="text-4xl font-bold leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                Creating <span className="text-[#5B5DDC]">Digital</span> Experiences
+              <h1 className="text-4xl font-bold leading-tight tracking-tighter text-color-5 sm:text-5xl md:text-6xl lg:text-7xl">
+                Creating <span className="text-color-1">Digital</span> Experiences
               </h1>
             </motion.div>
             <motion.div variants={item}>
-              <p className="max-w-md text-lg text-gray-400 md:text-xl">
+              <p className="max-w-md text-lg text-color-4 md:text-xl">
                 I build modern, responsive websites and applications with a focus on clean design and exceptional user experience.
               </p>
             </motion.div>
             <motion.div variants={item} className="flex flex-wrap justify-center gap-4 md:justify-start">
               <Link to='/projects'
-                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-[#5B5DDC] px-6 font-medium text-white transition-all hover:bg-opacity-90"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-color-1 px-6 font-medium text-white transition-all hover:bg-opacity-90"
               >
                 <span className="relative">View My Work</span>
-                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
+                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-color-5 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40"></span>
               </Link>
               <Link
               to='/contact'
-                className="inline-flex h-12 items-center justify-center rounded-md border border-[#5B5DDC] bg-transparent px-6 font-medium text-[#5B5DDC] transition-colors hover:bg-[#5B5DDC]/10"
+                className="inline-flex h-12 items-center justify-center rounded-md border border-color-1 bg-transparent px-6 font-medium text-color-1 transition-colors hover:bg-color-4/10"
               >
                 Contact Me
               </Link>
@@ -80,7 +80,7 @@ export default function HeroSection() {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 transition-colors hover:text-[#5B5DDC]"
+                className="text-gray-400 transition-colors hover:text-color-1"
                 aria-label="GitHub"
               >
                 <GitHub size={20} />
@@ -89,7 +89,7 @@ export default function HeroSection() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 transition-colors hover:text-[#5B5DDC]"
+                className="text-gray-400 transition-colors hover:text-color-1"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -98,7 +98,7 @@ export default function HeroSection() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 transition-colors hover:text-[#5B5DDC]"
+                className="text-gray-400 transition-colors hover:text-color-1"
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
@@ -113,7 +113,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7 }}
             className="relative flex-1"
           >
-            <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-[#5B5DDC] sm:h-80 sm:w-80 md:h-96 md:w-96 z-20">
+            <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-color-1 sm:h-80 sm:w-80 md:h-96 md:w-96 z-20">
               <div className="absolute inset-0 bg-gradient-to-br from-[#5B5DDC]/20 to-transparent"></div>
               <img
                 src={Photo}
@@ -139,8 +139,8 @@ export default function HeroSection() {
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="flex flex-col items-center"
         >
-          <span className="mb-2 text-sm text-gray-400">Scroll Down</span>
-          <div className="h-6 w-1 rounded-full bg-[#5B5DDC]"></div>
+          <span className="mb-2 text-sm text-color-4">Scroll Down</span>
+          <div className="h-6 w-1 rounded-full bg-color-1"></div>
         </motion.div>
       </motion.div>
     </div>
