@@ -1,191 +1,206 @@
 import React, { useState } from "react";
-import { GrLinkedinOption } from "react-icons/gr";
-import { FaGithub } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
-import axios from "axios";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { CheckCircle2, Loader2 } from "lucide-react";
 
-const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+// Form validation schema
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  subject: z.string().optional(),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+});
 
-    // Simple form validation
-    if (!name || !email || !subject || !message) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  async function onSubmit(data) {
+    setIsSubmitting(true);
 
     try {
-      const data = {
-        Name: name,
-        Email: email,
-        Phone: phone,
-        Address: address,
-        Subject: subject,
-        Message: message,
-      };
-      await axios
-        .post(
-          "https://sheet.best/api/sheets/019c92f7-c225-4c7b-97f4-88eff6cbd63a",
-          data
-        )
-        .then((response) => {
-          console.log(response);
-        });
-      alert("Message sent successfully!");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setAddress("");
-      setSubject("");
-      setMessage("");
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Failed to send message. Please try again later.");
-    }
-  };
+      const response = await fetch("https://api.sheetbest.com/sheets/09dc0312-8593-4df5-99ae-a77d4a845b80", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-  return (
-    <div
-      id="Contact"
-      className="w-full h-auto bg-black px-4 py-12 md:px-8 md:py-16 lg:px-12 lg:py-20 3xl:px-24 3xl:py-28 md:text-center lg:text-left hd:h-[40vh]"
-    >
-      <div className="w-full h-full flex flex-col lg:flex-row bg-[#292929] text-zinc-50">
-        {/* Contact Info */}
-        <div className="lg:w-1/2 h-full lg:pl-20 lg:pr-10 lg:pt-24 hidden md:block lg:block">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl 3xl:text-7xl pt-5 pb-6 hd:text-[100px]">
-            Get In Touch
-          </h1>
-          <h4 className="text-lg md:text-xl lg:text-2xl pb-4 md:pb-6 hd:text-[60px] hd:my-10">
-            Uttam Nagar, New Delhi, 110059
-          </h4>
-          <p className="text-base md:text-lg lg:text-xl text-white font-medium hd:text-[40px]">
-            Email: vikasgulia17@gmail.com
-          </p>
-          <div className="flex text-lg md:text-xl gap-3 pt-8 md:pt-10 items-center justify-center lg:justify-start hd:my-10 hd:gap-6">
-            <a
-              href="https://www.instagram.com/vikasgulia17?igsh=bXFoMXNrMnM2dXdq"
-              aria-label="Instagram Profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              
-              className="border-2 rounded-full hd:text-3xl border-white p-2"
-            >
-              <BsInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/vikas-gulia-b28255298"
-              aria-label="LinkedIn Profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 rounded-full hd:text-3xl border-white p-2"
-            >
-              <GrLinkedinOption />
-            </a>
-            <a
-              href="https://github.com/VIKASGULIA17"
-              aria-label="GitHub Profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-2 rounded-full hd:text-3xl border-white p-2"
-            >
-              <FaGithub />
-            </a>
+      if (!response.ok) {
+        throw new Error("Failed to send data to SheetBest");
+      }
+
+      const result = await response.json();
+      console.log(result);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-[#0A0A0A] py-12 px-4">
+        <div className="container mx-auto">
+          <div className="w-full max-w-md mx-auto p-6 rounded-lg bg-[#1A1A1A] border border-[#2A2A2A] text-center">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <CheckCircle2 className="h-12 w-12 text-[#5B5DDC]" />
+              <h2 className="text-2xl font-bold text-white">Message Sent!</h2>
+              <p className="text-gray-300">
+                Thank you for reaching out. I'll get back to you as soon as possible.
+              </p>
+              <Button
+                onClick={() => {
+                  setIsSubmitted(false);
+                  form.reset();
+                }}
+                className="bg-[#5B5DDC] hover:bg-[#4A4CB8] text-white"
+              >
+                Send Another Message
+              </Button>
+            </div>
           </div>
         </div>
-        <h1 className="text-4xl text-center pt-4 text-zinc-100 font-semibold md:hidden lg:hidden">
-          Contact Us
-        </h1>
-        {/* Contact Form */}
-        <div className="lg:w-1/2 h-full pt-8 lg:pt-24">
-          <form
-            onSubmit={handleSubmit}
-            className="px-4 lg:px-8 xl:px-12 3xl:px-24"
-          >
-            <div className="flex flex-col gap-4">
-              {/* Name and Email */}
-              <div className="flex flex-col md:flex-row md:gap-4">
-                <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 hd:text-[37px]"
-                  type="text"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-                <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0 hd:text-[37px]"
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              {/* Phone and Address */}
-              <div className="flex flex-col md:flex-row md:gap-4">
-                <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 hd:text-[37px]"
-                  type="text"
-                  placeholder="Phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-                <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full md:w-1/2 mt-4 md:mt-0 hd:text-[37px]"
-                  type="text"
-                  placeholder="Address"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                />
-              </div>
-              {/* Subject */}
-              <div className="w-full">
-                <input
-                  className="capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full hd:text-[37px]"
-                  type="text"
-                  placeholder="Subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                  required
-                />
-              </div>
-              {/* Message */}
-              <div className="w-full">
-                <textarea
-                  name="message"
-                  placeholder="Type your message"
-                  className="hd:text-[37px] capitalize bg-transparent focus:outline-none py-2 pl-4 border-b-2 border-zinc-400 placeholder:text-white text-lg md:text-xl w-full h-32 md:h-40 lg:h-48"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                />
-              </div>
-              {/* Submit Button */}
-              <div className="w-full flex justify-start">
-                <button
-                  type="submit"
-                  className="duration-500 bg-[#E6C7EB] border-2 border-[#E6C7EB] font-extralight w-full md:w-full lg:w-full h-10 mt-4 text-lg text-black hover:bg-transparent hover:text-[#E6C7EB] mb-5 hd:text-[37px] hd:h-16"
-                >
-                  Submit
-                </button>
-              </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-[#0A0A0A] py-12 px-4">
+      <div className="container mx-auto">
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="bg-[#121212] rounded-lg p-6 md:p-8 border border-[#2A2A2A]">
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                <span className="text-[#5B5DDC]">Contact</span> Us
+              </h2>
+              <p className="text-gray-300">
+                Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
+              </p>
             </div>
-          </form>
+
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-200">Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Your name"
+                            {...field}
+                            className="bg-[#1A1A1A] border-[#333333] text-white placeholder:text-gray-500 focus-visible:ring-[#5B5DDC] focus-visible:border-[#5B5DDC]"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-gray-200">Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="your.email@example.com"
+                            type="email"
+                            {...field}
+                            className="bg-[#1A1A1A] border-[#333333] text-white placeholder:text-gray-500 focus-visible:ring-[#5B5DDC] focus-visible:border-[#5B5DDC]"
+                          />
+                        </FormControl>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-200">Subject (Optional)</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="What is this regarding?"
+                          {...field}
+                          className="bg-[#1A1A1A] border-[#333333] text-white placeholder:text-gray-500 focus-visible:ring-[#5B5DDC] focus-visible:border-[#5B5DDC]"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-400" />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-200">Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Your message here..."
+                          {...field}
+                          className="min-h-[150px] bg-[#1A1A1A] border-[#333333] text-white placeholder:text-gray-500 focus-visible:ring-[#5B5DDC] focus-visible:border-[#5B5DDC]"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-400" />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full md:w-auto bg-[#5B5DDC] hover:bg-[#4A4CB8] text-white transition-colors"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
+                </Button>
+              </form>
+            </Form>
+          </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Contact;
+}
