@@ -61,7 +61,9 @@ const [TextColor, setTextColor] = useState("Home")
           </a>
         </nav>
         <Button className="bg-[#5B5DDC] hover:bg-[#4A4CBB] text-white">
+          <Link to='/contact'>
           Contact Me
+          </Link>
         </Button>
       </div>
 

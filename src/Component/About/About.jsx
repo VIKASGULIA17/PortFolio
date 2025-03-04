@@ -20,7 +20,7 @@ export default function AboutMe() {
               />
             </div>
 
-            <div className="flex justify-center mt-4 space-x-3">
+            <div className="flex justify-center mt-4 gap-3 space-x-3">
               <a
                 href="https://github.com/vikasgulia17"
                 className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
@@ -48,13 +48,7 @@ export default function AboutMe() {
                 <Instagram size={24} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a
-                href="vikasgulia17@email.com"
-                className="text-gray-300 hover:text-[#5B5DDC] transition-colors"
-              >
-                <Mail size={24} />
-                <span className="sr-only">Email</span>
-              </a>
+              
             </div>
           </div>
 
