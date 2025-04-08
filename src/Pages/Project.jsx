@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import Ani_image from '@/assets/pictures/ani-gpt.png';
 
 export default function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -8,13 +9,13 @@ export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Ani-gpt",
       description:
-        "A full-featured online store with product catalog, shopping cart, and secure checkout process.",
-      image: "https://www.vocso.com/blog/wp-content/uploads/2022/02/eCommerce-Website-Features-1920-x-1080.jpg",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      demoUrl: "#",
-      sourceUrl: "#",
+        "A gpt website made using gemini api with responsive and friendly design with great responses and many other features.",
+      image: Ani_image,
+      technologies: ["React", "Javascript", "Tailwind css", "Framer-motion","Shadcn"],
+      demoUrl: "https://ani-gpt.netlify.app/",
+      sourceUrl: "https://github.com/VIKASGULIA17/Gemini-Clone",
     },
     {
       id: 2,
@@ -53,8 +54,8 @@ export default function ProjectsSection() {
         "Personal portfolio showcasing projects and skills with a modern, responsive design.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh7PTcPoUVdv7MgIAVGpEDD0amCk5EN-olw&s",
       technologies: ["React.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
-      demoUrl: "#",
-      sourceUrl: "#",
+      demoUrl: "https://vikasguliaportfolio.netlify.app/",
+      sourceUrl: "https://github.com/VIKASGULIA17/PortFolio",
     },
   ];
 
@@ -79,7 +80,7 @@ export default function ProjectsSection() {
             >
               <div className="relative h-60 w-full">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   className="object-cover h-full w-full"
                 />

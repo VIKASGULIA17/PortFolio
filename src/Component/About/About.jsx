@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button"; 
 import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import Photo from "@/assets/pictures/AboutPagePic.jpeg"
+import Photo from "@/assets/pictures/MyImage.jpeg"
 
 export default function AboutMe() {
   return (
