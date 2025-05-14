@@ -27,6 +27,7 @@ const formSchema = z.object({
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(null);  // For displaying errors
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -40,25 +41,38 @@ export default function ContactForm() {
 
   async function onSubmit(data) {
     setIsSubmitting(true);
+    setError(null); // Reset error state
+
+    const telegramMessage = 
+      `📬 New Contact Form Submission:\n` +
+      `👤 Name: ${data.name}\n` +
+      `📧 Email: ${data.email}\n` +
+      `📝 Subject: ${data.subject || "N/A"}\n` +
+      `💬 Message: ${data.message}`;
 
     try {
-      const response = await fetch("https://api.sheetbest.com/sheets/09dc0312-8593-4df5-99ae-a77d4a845b80", {
+      // Send to Telegram
+      const response = await fetch(`https://api.telegram.org/bot7556029899:AAG3EogGPdL17WImWlbIT18R5eNU81U9IAA/sendMessage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          chat_id: 6974520564,
+          text: telegramMessage,
+        }),
       });
 
+      const result = await response.json();
+      console.log("Telegram API response:", result);
       if (!response.ok) {
-        throw new Error("Failed to send data to SheetBest");
+        throw new Error(`Telegram Error: ${result.description}`);
       }
 
-      const result = await response.json();
-      console.log(result);
       setIsSubmitted(true);
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
+      setError("There was an issue sending the message. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
@@ -181,6 +195,12 @@ export default function ContactForm() {
                     </FormItem>
                   )}
                 />
+
+                {error && (
+                  <div className="text-red-500 text-center my-4">
+                    <p>{error}</p>
+                  </div>
+                )}
 
                 <Button
                   type="submit"

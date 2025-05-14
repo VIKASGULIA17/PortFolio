@@ -27,28 +27,10 @@ export default function ProjectsSection() {
       demoUrl: "#",
       sourceUrl: "#",
     },
+    
+    
     {
       id: 3,
-      title: "Weather Dashboard",
-      description:
-        "Real-time weather information with interactive maps, forecasts, and location-based services.",
-      image: "https://play-lh.googleusercontent.com/_q9Sm5CjBSJzdbi41S-OFuYJlpL65mNrDxvTTOhUh4z165EOTAYlsI9sKdZuGMv6YCY=w526-h296-rw",
-      technologies: ["Vue.js", "Express", "OpenWeather API", "Mapbox"],
-      demoUrl: "#",
-      sourceUrl: "#",
-    },
-    {
-      id: 4,
-      title: "Social Media Analytics",
-      description:
-        "Data visualization platform for tracking engagement metrics across multiple social media channels.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4nJ2mK80lp-qTnHLBKS_-fw7FZ5Nly8uQxw&s",
-      technologies: ["React", "D3.js", "Firebase", "Material UI"],
-      demoUrl: "#",
-      sourceUrl: "#",
-    },
-    {
-      id: 6,
       title: "Portfolio Website",
       description:
         "Personal portfolio showcasing projects and skills with a modern, responsive design.",

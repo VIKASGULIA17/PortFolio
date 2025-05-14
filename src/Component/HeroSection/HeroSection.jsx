@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, GitlabIcon as GitHub, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, GitlabIcon as GitHub, Linkedin, Twitter, Instagram } from "lucide-react";
 import Photo from "@/assets/pictures/MyImage.jpeg"
 import { Link } from "react-router-dom";
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
           >
             <motion.div variants={item}>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-color-1">
-                Frontend Developer & UI/UX Designer
+                Frontend Developer & Data Scientist
               </h2>
             </motion.div>
             <motion.div variants={item}>
@@ -77,7 +77,7 @@ export default function HeroSection() {
             </motion.div>
             <motion.div variants={item} className="flex justify-center gap-6 pt-4 md:justify-start">
               <a
-                href="https://github.com"
+                href="https://github.com/vikasgulia17"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-color-1"
@@ -86,7 +86,7 @@ export default function HeroSection() {
                 <GitHub size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/vikas-gulia-b28255298/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-color-1"
@@ -95,13 +95,13 @@ export default function HeroSection() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://instagram.com/orewa__vikas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 transition-colors hover:text-color-1"
                 aria-label="Twitter"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
             </motion.div>
           </motion.div>

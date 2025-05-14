@@ -3,7 +3,6 @@ import {
   Github,
   Linkedin,
   Instagram,
-  Mail,
   ExternalLink,
   ChevronRight,
   Code,
@@ -137,7 +136,7 @@ const AboutMe = () => {
                     Frontend Development
                   </h4>
                   <p className="text-zinc-400">
-                    React, Next.js, TypeScript, Tailwind CSS, and modern JavaScript frameworks
+                    React, Tailwind CSS, and modern JavaScript frameworks
                   </p>
                 </div>
                 <div className="bg-zinc-800/50 p-6 rounded-xl border border-zinc-700 hover:border-[#5B5DDC] transition-colors">
