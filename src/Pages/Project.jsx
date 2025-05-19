@@ -11,21 +11,21 @@ export default function ProjectsSection() {
       id: 1,
       title: "Ani-gpt",
       description:
-        "A gpt website made using gemini api with responsive and friendly design with great responses and many other features.",
+        "Developed a responsive AI assistant platform, featuring an intuitive and friendly interface. The website delivers sophisticated responses while maintaining exceptional user experience across all devices.",
       image: Ani_image,
-      technologies: ["React", "Javascript", "Tailwind css", "Framer-motion","Shadcn"],
+      technologies: ["React", "Javascript", "Tailwind css", "Framer-motion","Shadcn","Supabase"],
       demoUrl: "https://ani-gpt.netlify.app/",
       sourceUrl: "https://github.com/VIKASGULIA17/Gemini-Clone",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Nerverse",
       description:
-        "A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.",
+        "Developed NexVerse's official platform for IITM Janakpuri's tech society. Features an engaging interface showcasing events, activities, and member achievements.",
       image: "https://static.vecteezy.com/system/resources/previews/006/506/843/non_2x/unique-modern-flat-design-concept-of-task-management-for-website-and-mobile-website-easy-to-edit-and-customize-illustration-free-vector.jpg",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-      demoUrl: "#",
-      sourceUrl: "#",
+      demoUrl: "https://nexverse-lake.vercel.app/event/celestia",
+      sourceUrl: "https://github.com/tejveer755/Nexverse",
     },
     
     
@@ -33,7 +33,7 @@ export default function ProjectsSection() {
       id: 3,
       title: "Portfolio Website",
       description:
-        "Personal portfolio showcasing projects and skills with a modern, responsive design.",
+        "Designed and built my professional portfolio. Features an intuitive interface showcasing my projects, skills, and experience with responsive design and smooth animations for optimal user engagement.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh7PTcPoUVdv7MgIAVGpEDD0amCk5EN-olw&s",
       technologies: ["React.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
       demoUrl: "https://vikasguliaportfolio.netlify.app/",
