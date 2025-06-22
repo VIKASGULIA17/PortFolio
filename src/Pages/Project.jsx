@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import Ani_image from '@/assets/pictures/ani-gpt.png';
+import Ani_image from '@/assets/pictures/projects/ani-gpt.png';
+import Personal_development_tracker from '@/assets/pictures/projects/personal_development_tracker.png';
+import Nexverse from '@/assets/pictures/projects/nexverse.png';
+import portfolio from '@/assets/pictures/projects/portfolio.png';
 
 export default function ProjectsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -21,8 +24,8 @@ export default function ProjectsSection() {
       id: 2,
       title: "Nerverse",
       description:
-        "Developed NexVerse's official platform for IITM Janakpuri's tech society. Features an engaging interface showcasing events, activities, and member achievements.",
-      image: "https://static.vecteezy.com/system/resources/previews/006/506/843/non_2x/unique-modern-flat-design-concept-of-task-management-for-website-and-mobile-website-easy-to-edit-and-customize-illustration-free-vector.jpg",
+        "Developed NexVerse's official platform for IITM Janakpuri's tech society. Features an engaging and intuitive interface showcasing events, activities, member achievements, announcements, and collaborations.",
+      image: Nexverse,
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
       demoUrl: "https://nexverse-lake.vercel.app/event/celestia",
       sourceUrl: "https://github.com/tejveer755/Nexverse",
@@ -34,10 +37,20 @@ export default function ProjectsSection() {
       title: "Portfolio Website",
       description:
         "Designed and built my professional portfolio. Features an intuitive interface showcasing my projects, skills, and experience with responsive design and smooth animations for optimal user engagement.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh7PTcPoUVdv7MgIAVGpEDD0amCk5EN-olw&s",
+      image: portfolio,
       technologies: ["React.js", "Tailwind CSS", "Framer Motion", "Shadcn"],
       demoUrl: "https://vikasguliaportfolio.netlify.app/",
       sourceUrl: "https://github.com/VIKASGULIA17/PortFolio",
+    },
+    {
+      id: 4,
+      title: "Personal Development Tracker",
+      description:
+        "A full-featured self-growth platform designed to track and visualize personal progress. Includes modules for skills, habits, health, finances, projects, mood, and more — all in a clean, interactive dashboard with AI-generated insights and time tracking.",
+      image: Personal_development_tracker,
+      technologies: ["Next.js", "Tailwind CSS", "Supabase", "Shadcn"],
+      demoUrl: "https://personal-development-tracker.netlify.app/",
+      sourceUrl: "https://github.com/VIKASGULIA17/Personal-development-tracker",
     },
   ];
 
@@ -52,7 +65,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-[#222121] hover:shadow-[0_0_15px_rgba(91,93,220,110.3)] hover:-translate-y-1 rounded-xl overflow-hidden shadow-md transition-all duration-300"
+              className="bg-[#222121] hover:shadow-[0_0_15px_rgba(91,93,220,110.3)] hover:-translate-y-1 rounded-xl border-[2px] border-slate-700 overflow-hidden shadow-md transition-all duration-300"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               whileHover={{ scale: 1.03 }}
@@ -60,11 +73,11 @@ export default function ProjectsSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
-              <div className="relative h-60 w-full">
+              <div className="relative h-60 w-full  ">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="object-cover h-full w-full"
+                  className="object-fill h-full w-full border-b-[2px] border-color-1"
                 />
               </div>
 

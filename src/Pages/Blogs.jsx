@@ -1,58 +1,31 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import python_datatype from "../../src/assets/pictures/blog/python-datatype.webp"
+import Webscraping from "../../src/assets/pictures/blog/web-scrapping.png"
 
 const blogPosts = [
   {
     id: 1,
-    title: "Getting Started with Web Development",
+    title: "Exploring Python Data Types",
     excerpt:
-      "Learn the fundamentals of HTML, CSS, and JavaScript to kickstart your web development journey.",
-    date: "Feb 24, 2025",
-    imageUrl: "https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg",
-    tags: ["Beginners", "Web Dev"],
-    slug: "/blog/getting-started",
+      "Master the basics of Python data types—integers, strings, lists, and more—to build a strong foundation in programming.",
+    date: "Jan 11, 2025",
+    imageUrl: python_datatype,
+    tags: ["Beginners", "Python"],
+    slug: "https://dev.to/vikas_gulia/exploring-python-data-types-a-beginners-guide-fe2",
   },
   {
     id: 2,
-    title: "Advanced React Patterns",
+    title: "Web Scraping in Python",
     excerpt:
-      "Explore advanced React patterns that will help you build more maintainable and scalable applications.",
-    date: "Feb 20, 2025",
-    imageUrl: "https://www.bacancytechnology.com/qanda/wp-content/uploads/2023/06/React-Animated-Fade.png",
-    tags: ["React", "Advanced"],
-    slug: "/blog/advanced-react",
+      "Learn how to extract data from websites using Python libraries like BeautifulSoup and Requests in this beginner-friendly web scraping guide.",
+    date: "June 22, 2025",
+    imageUrl: Webscraping,
+    tags: ["Python", "Webscraping"],
+    slug: "https://dev.to/vikas_gulia/web-scraping-in-python-a-practical-guide-for-data-scientists-4012",
   },
-  {
-    id: 3,
-    title: "The Future of AI in Web Development",
-    excerpt:
-      "Discover how artificial intelligence is transforming the landscape of modern web development.",
-    date: "Feb 15, 2025",
-    imageUrl: "https://media.licdn.com/dms/image/v2/D4D12AQE6JlCOS0JjrQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689050009065?e=2147483647&v=beta&t=9n4b22jjQW-dTFsFCjdS_nwPKHjkBCwBg8Ag6Y4F9dc",
-    tags: ["AI", "Future Tech"],
-    slug: "/blog/ai-web-dev",
-  },
-  {
-    id: 4,
-    title: "Optimizing Website Performance",
-    excerpt:
-      "Learn essential techniques to improve your website's loading speed and overall performance.",
-    date: "Feb 10, 2025",
-    imageUrl: "https://www.shutterstock.com/shutterstock/videos/1081041155/thumb/5.jpg?ip=x480",
-    tags: ["Performance", "Optimization"],
-    slug: "/blog/performance",
-  },
-  {
-    id: 5,
-    title: "Introduction to TypeScript",
-    excerpt:
-      "Get started with TypeScript and learn how it can improve your JavaScript development experience.",
-    date: "Jan 30, 2025",
-    imageUrl: "https://cbx-prod.b-cdn.net/COLOURBOX50689510.jpg?width=800&height=800&quality=70",
-    tags: ["TypeScript", "JavaScript"],
-    slug: "/blog/typescript-intro",
-  },
+  
 ];
 
 export default function BlogSection() {
@@ -121,7 +94,7 @@ export default function BlogSection() {
 
         <div className="mt-16 text-center">
           <Link
-            to="/blog"
+            to="https://dev.to/vikas_gulia"
             className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#5B5DDC] hover:bg-[#4A4CB8] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B5DDC]"
           >
             View All Articles
