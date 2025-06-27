@@ -3,6 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import python_datatype from "../../src/assets/pictures/blog/python-datatype.webp"
 import Webscraping from "../../src/assets/pictures/blog/web-scrapping.png"
+import univariate from "../../src/assets/pictures/blog/Univariant_analysis.png"
+import multivariate from "../../src/assets/pictures/blog/multivariant_analysis.png"
+import feature_scaling from "../../src/assets/pictures/blog/Feature_scaling.webp"
+import column_transformer from "../../src/assets/pictures/blog/Column_transformer.webp"
 
 const blogPosts = [
   {
@@ -24,6 +28,46 @@ const blogPosts = [
     imageUrl: Webscraping,
     tags: ["Python", "Webscraping"],
     slug: "https://dev.to/vikas_gulia/web-scraping-in-python-a-practical-guide-for-data-scientists-4012",
+  },
+  {
+    id: 3,
+    title: "Univariate Analysis in Data Science: A Complete Beginner to Pro Guide",
+    excerpt:
+      "Learn how to analyze individual features in your data using descriptive statistics and visualizations in this univariate analysis guide.",
+    date: "June 24, 2025",
+    imageUrl: univariate,
+    tags: ["Python", "Data cleaning","Analysis"],
+    slug: "https://dev.to/vikas_gulia/univariate-analysis-in-data-science-a-complete-beginner-to-pro-guide-5e81",
+  },
+  {
+    id: 4,
+    title: "Mastering Multivariate Analysis: A Guide for Data Science Enthusiasts",
+    excerpt:
+      "Discover the power of multivariate analysis in data science to identify patterns and dependencies between features.",
+    date: "June 25, 2025",
+    imageUrl: multivariate,
+    tags: ["Python", "Data cleaning","Analysis","Machine learning"],
+    slug: "https://dev.to/vikas_gulia/mastering-multivariate-analysis-a-guide-for-data-science-enthusiasts-1gdk",
+  },
+  {
+    id: 5,
+    title: "Feature Scaling in Machine Learning: Why It Matters and How to Do It",
+    excerpt:
+      "Get started with feature scaling using Python’s sklearn library and boost the performance of your models.",
+    date: "June 25, 2025",
+    imageUrl: feature_scaling,
+    tags: ["Python", "EDA","Analysis","Machine Learning"],
+    slug: "https://dev.to/vikas_gulia/feature-scaling-in-machine-learning-why-it-matters-and-how-to-do-it-45m5",
+  },
+  {
+    id: 6,
+    title: "ColumnTransformer and Pipelines in Scikit-Learn: Clean, Scalable, and Powerful Preprocessing",
+    excerpt:
+      "Combine multiple preprocessing steps with ColumnTransformer and wrap them into a Pipeline for efficient model building.",
+    date: "June 26, 2025",
+    imageUrl: column_transformer,
+    tags: ["Python", "Data preprocessing","Analysis"],
+    slug: "https://dev.to/vikas_gulia/columntransformer-and-pipelines-in-scikit-learn-clean-scalable-and-powerful-preprocessing-3mff",
   },
   
 ];
